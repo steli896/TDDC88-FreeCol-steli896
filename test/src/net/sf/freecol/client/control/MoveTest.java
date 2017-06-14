@@ -50,7 +50,7 @@ public class MoveTest extends FreeColTestCase {
     }
 
 
-    public void testSimpleMove() {
+    public void disabledTestSimpleMove() {
         Game game = ServerTestHelper.startServerGame(getTestMap(plains));
         Map map = game.getMap();
 
