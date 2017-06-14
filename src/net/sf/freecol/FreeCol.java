@@ -194,31 +194,6 @@ public final class FreeCol {
      */
     public static void main(String[] args) {
         freeColRevision = FREECOL_VERSION;
-        JarURLConnection juc;
-        try {
-            juc = getJarURLConnection(FreeCol.class);
-        } catch (IOException ioe) {
-            juc = null;
-            System.err.println("Unable to open class jar: "
-                + ioe.getMessage());
-        }
-        if (juc != null) {
-            try {
-                String revision = readVersion(juc);
-                if (revision != null) {
-                    freeColRevision += " (Revision: " + revision + ")";
-                }
-            } catch (Exception e) {
-                System.err.println("Unable to load Manifest: "
-                    + e.getMessage());
-            }
-            try {
-                splashStream = getDefaultSplashStream(juc);
-            } catch (Exception e) {
-                System.err.println("Unable to open default splash: "
-                    + e.getMessage());
-            }
-        }
 
         // Java bug #7075600 causes BR#2554.  The workaround is to set
         // the following property.  Remove if/when they fix Java.
