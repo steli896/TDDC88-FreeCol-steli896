@@ -19,6 +19,8 @@
 
 package net.sf.freecol.client.control;
 
+import org.junit.Test;
+
 import net.sf.freecol.client.ClientTestHelper;
 import net.sf.freecol.client.FreeColClient;
 import net.sf.freecol.common.model.Game;
@@ -49,7 +51,9 @@ public class MoveTest extends FreeColTestCase {
         super.tearDown();
     }
 
-
+    @Test
+    public void testDummy() {}
+    
     public void disabledTestSimpleMove() {
         Game game = ServerTestHelper.startServerGame(getTestMap(plains));
         Map map = game.getMap();
