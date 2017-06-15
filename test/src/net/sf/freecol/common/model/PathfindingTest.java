@@ -136,7 +136,7 @@ public class PathfindingTest extends FreeColTestCase {
         assertNotNull(path);
         assertEquals("Composed-OR GoalDecider should find natives", nativeTile,
                      path.getLastNode().getTile());
-        gd = GoalDeciders.getComposedGoalDecider(false, nativeGD, colonyGD);
+        gd = GoalDeciders.getComposedGoalDecider(false, colonyGD, nativeGD);
         path = unit.search(unitTile, gd, null, 1, null);
         assertNotNull(path);
         assertEquals("Composed-OR GoalDecider should find colony", colonyTile,
