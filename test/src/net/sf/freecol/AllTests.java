@@ -31,7 +31,7 @@ import junit.framework.TestSuite;
  */
 public class AllTests {
 
-    public static Test suite() {
+    public static Test suite() 
         TestSuite suite = new TestSuite("Test for net.sf.freecol");
         // $JUnit-BEGIN$
 
